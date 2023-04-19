@@ -4,6 +4,6 @@ namespace Learniverse.Controllers
 {
     public class StudentController : ApiController
     {
-        prop
+        
     }
 }
