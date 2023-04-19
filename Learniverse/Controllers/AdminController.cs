@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace Learniverse.Controllers
 {
-    public class ShahinController : ApiController
+    public class AdminController : ApiController
     {
     }
 }
