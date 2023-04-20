@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class Repo
+    internal class TeacherRepo
     {
-        internal LearnContext db;
-        internal Repo()
-        {
-            db = new LearnContext();
-        }
     }
 }
