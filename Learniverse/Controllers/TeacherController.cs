@@ -1,4 +1,5 @@
-﻿using BLL.Services;
+﻿using BLL.DTOs;
+using BLL.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +43,55 @@ namespace Learniverse.Controllers
 
             }
         }
+
         // remaining UPDATE and CREATE
+
+        [HttpPost]
+        [Route("api/teacher/add")]
+        public HttpResponseMessage Add(TeacherDTO pro)
+        {
+            try
+            {
+                var res = TeacherService.Create(pro);
+                if (res)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Inserted", Data = pro });
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = "Not Inserted", Data = pro });
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = pro });
+            }
+        }
+        
+        [HttpPost]
+        [Route("api/teacher/update")]
+        public HttpResponseMessage Update(TeacherDTO pro)
+        {
+            try
+            {
+                var res = TeacherService.Update(pro);
+                if (res)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Updated", Data = pro });
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = "Not Updated", Data = pro });
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = pro });
+            }
+        }
+        
         [HttpPost]
         [Route("api/teacher/delete/{id}")]
         public HttpResponseMessage Delete(int id)

@@ -38,31 +38,29 @@ namespace BLL.Services
 
         public static bool Create(TeacherDTO teacher)
         {
-            //var data = DataAccessFactory.TeacherData().Insert(teacher);
             var config = new MapperConfiguration(c =>
             {
-                c.CreateMap<Teacher, TeacherDTO>();
+                c.CreateMap<TeacherDTO, Teacher>();
             });
             var mapper = new Mapper(config);
-            var mapped = mapper.Map<TeacherDTO>(teacher);
-
-            // var data = Convert(product);
-            //var res = DataAccessFactory.TeacherData().Insert(Teacher);
-           // var res = DataAccessFactory.TeacherData().Insert(insert);
-
-           // if (res != null) return true;
-            return false;
-        }
-        /*
-        public static bool Update(ProductDTO product)
-        {
-            var data = Convert(product);
-            var res = DataAccessFact.ProductData().Update(data);
-
+            var mapped = mapper.Map<Teacher>(teacher);
+            var res = DataAccessFactory.TeacherData().Insert(mapped);
             if (res != null) return true;
             return false;
         }
-        */
+        
+        public static bool Update(TeacherDTO teacher)
+        {
+            var config = new MapperConfiguration(c =>
+            {
+                c.CreateMap<TeacherDTO, Teacher>();
+            });
+            var mapper = new Mapper(config);
+            var mapped = mapper.Map<Teacher>(teacher);
+            var res = DataAccessFactory.TeacherData().Update(mapped);
+            if (res != null) return true;
+            return false;
+        }
         public static bool Delete(int id)
         {
             return DataAccessFactory.TeacherData().Delete(id);
