@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="LearnContext.cs" />
     <Compile Include="Migrations\202304200911584_table_add_Teacher.cs" />
     <Compile Include="Migrations\202304200911584_table_add_Teacher.designer.cs">
@@ -61,14 +62,13 @@
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\Repo.cs" />
+    <Compile Include="Repos\TeacherRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202304200911584_table_add_Teacher.resx">
       <DependentUpon>202304200911584_table_add_Teacher.cs</DependentUpon>
