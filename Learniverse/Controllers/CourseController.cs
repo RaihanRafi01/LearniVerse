@@ -9,16 +9,15 @@ using System.Web.Http;
 
 namespace Learniverse.Controllers
 {
-    public class TeacherController : ApiController
+    public class CourseController : ApiController
     {
-
         [HttpGet]
-        [Route("api/teacher")]
+        [Route("api/course")]
         public HttpResponseMessage Get()
         {
             try
             {
-                var data = TeacherService.Get();
+                var data = CourseService.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -28,13 +27,13 @@ namespace Learniverse.Controllers
 
         }
         [HttpGet]
-        [Route("api/teacher/{id}")]
+        [Route("api/course/{id}")]
         public HttpResponseMessage Get(int id)
         {
             try
             {
 
-                return Request.CreateResponse(HttpStatusCode.OK, TeacherService.Get(id));
+                return Request.CreateResponse(HttpStatusCode.OK, CourseService.Get(id));
             }
             catch (Exception ex)
             {
@@ -45,12 +44,12 @@ namespace Learniverse.Controllers
         }
 
         [HttpPost]
-        [Route("api/teacher/add")]
-        public HttpResponseMessage Add(TeacherDTO pro)
+        [Route("api/course/add")]
+        public HttpResponseMessage Add(CourseDTO pro)
         {
             try
             {
-                var res = TeacherService.Create(pro);
+                var res = CourseService.Create(pro);
                 if (res)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Inserted", Data = pro });
@@ -66,14 +65,14 @@ namespace Learniverse.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = pro });
             }
         }
-        
+
         [HttpPost]
-        [Route("api/teacher/update")]
-        public HttpResponseMessage Update(TeacherDTO pro)
+        [Route("api/course/update")]
+        public HttpResponseMessage Update(CourseDTO pro)
         {
             try
             {
-                var res = TeacherService.Update(pro);
+                var res = CourseService.Update(pro);
                 if (res)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Updated", Data = pro });
@@ -89,15 +88,15 @@ namespace Learniverse.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = pro });
             }
         }
-        
+
         [HttpPost]
-        [Route("api/teacher/delete/{id}")]
+        [Route("api/course/delete/{id}")]
         public HttpResponseMessage Delete(int id)
         {
             try
             {
 
-                return Request.CreateResponse(HttpStatusCode.OK, TeacherService.Delete(id));
+                return Request.CreateResponse(HttpStatusCode.OK, CourseService.Delete(id));
             }
             catch (Exception ex)
             {

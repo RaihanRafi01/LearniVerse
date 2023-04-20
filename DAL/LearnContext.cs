@@ -11,5 +11,6 @@ namespace DAL
     public class LearnContext : DbContext
     {
         public DbSet<Teacher> teachers { get; set; }
+        public DbSet<Course> courses { get; set; }
     }
 }

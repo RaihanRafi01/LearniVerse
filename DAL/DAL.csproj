@@ -58,9 +58,15 @@
     <Compile Include="Migrations\202304200911584_table_add_Teacher.designer.cs">
       <DependentUpon>202304200911584_table_add_Teacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304201417179_add_tabl_Course.cs" />
+    <Compile Include="Migrations\202304201417179_add_tabl_Course.designer.cs">
+      <DependentUpon>202304201417179_add_tabl_Course.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\CourseRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\TeacherRepo.cs" />
   </ItemGroup>
@@ -72,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202304200911584_table_add_Teacher.resx">
       <DependentUpon>202304200911584_table_add_Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304201417179_add_tabl_Course.resx">
+      <DependentUpon>202304201417179_add_tabl_Course.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
