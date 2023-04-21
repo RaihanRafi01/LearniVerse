@@ -46,47 +46,47 @@ namespace Learniverse.Controllers
 
         [HttpPost]
         [Route("api/teacher/add")]
-        public HttpResponseMessage Add(TeacherDTO pro)
+        public HttpResponseMessage Add(TeacherDTO obj)
         {
             try
             {
-                var res = TeacherService.Create(pro);
+                var res = TeacherService.Create(obj);
                 if (res)
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Inserted", Data = pro });
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Inserted", Data = obj });
                 }
                 else
                 {
-                    return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = "Not Inserted", Data = pro });
+                    return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = "Not Inserted", Data = obj });
                 }
             }
             catch (Exception ex)
             {
 
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = pro });
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = obj });
             }
         }
         
         [HttpPost]
         [Route("api/teacher/update")]
-        public HttpResponseMessage Update(TeacherDTO pro)
+        public HttpResponseMessage Update(TeacherDTO obj)
         {
             try
             {
-                var res = TeacherService.Update(pro);
+                var res = TeacherService.Update(obj);
                 if (res)
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Updated", Data = pro });
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Updated", Data = obj });
                 }
                 else
                 {
-                    return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = "Not Updated", Data = pro });
+                    return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = "Not Updated", Data = obj });
                 }
             }
             catch (Exception ex)
             {
 
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = pro });
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = obj });
             }
         }
         

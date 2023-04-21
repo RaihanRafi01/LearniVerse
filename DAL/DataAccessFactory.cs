@@ -20,5 +20,9 @@ namespace DAL
         {
             return new CourseRepo();
         }
+        public static IRepo<Ques, int, Ques> QuesData()
+        {
+            return new QuesRepo();
+        }
     }
 }

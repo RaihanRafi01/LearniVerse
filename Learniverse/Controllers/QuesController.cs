@@ -9,15 +9,15 @@ using System.Web.Http;
 
 namespace Learniverse.Controllers
 {
-    public class CourseController : ApiController
+    public class QuesController : ApiController
     {
         [HttpGet]
-        [Route("api/course")]
+        [Route("api/ques")]
         public HttpResponseMessage Get()
         {
             try
             {
-                var data = CourseService.Get();
+                var data = QuesService.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -27,13 +27,13 @@ namespace Learniverse.Controllers
 
         }
         [HttpGet]
-        [Route("api/course/{id}")]
+        [Route("api/ques/{id}")]
         public HttpResponseMessage Get(int id)
         {
             try
             {
 
-                return Request.CreateResponse(HttpStatusCode.OK, CourseService.Get(id));
+                return Request.CreateResponse(HttpStatusCode.OK, QuesService.Get(id));
             }
             catch (Exception ex)
             {
@@ -44,12 +44,12 @@ namespace Learniverse.Controllers
         }
 
         [HttpPost]
-        [Route("api/course/add")]
-        public HttpResponseMessage Add(CourseDTO obj)
+        [Route("api/ques/add")]
+        public HttpResponseMessage Add(QuesDTO obj)
         {
             try
             {
-                var res = CourseService.Create(obj);
+                var res = QuesService.Create(obj);
                 if (res)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Inserted", Data = obj });
@@ -67,12 +67,12 @@ namespace Learniverse.Controllers
         }
 
         [HttpPost]
-        [Route("api/course/update")]
-        public HttpResponseMessage Update(CourseDTO obj)
+        [Route("api/ques/update")]
+        public HttpResponseMessage Update(QuesDTO obj)
         {
             try
             {
-                var res = CourseService.Update(obj);
+                var res = QuesService.Update(obj);
                 if (res)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Updated", Data = obj });
@@ -90,13 +90,13 @@ namespace Learniverse.Controllers
         }
 
         [HttpPost]
-        [Route("api/course/delete/{id}")]
+        [Route("api/ques/delete/{id}")]
         public HttpResponseMessage Delete(int id)
         {
             try
             {
 
-                return Request.CreateResponse(HttpStatusCode.OK, CourseService.Delete(id));
+                return Request.CreateResponse(HttpStatusCode.OK, QuesService.Delete(id));
             }
             catch (Exception ex)
             {
