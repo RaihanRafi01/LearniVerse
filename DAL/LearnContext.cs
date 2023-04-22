@@ -1,10 +1,5 @@
 ﻿using DAL.Models;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -13,5 +8,8 @@ namespace DAL
         public DbSet<Teacher> teachers { get; set; }
         public DbSet<Course> courses { get; set; }
         public DbSet<Ques> ques { get; set; }
+
+
+        public DbSet<Student> students { get; set; }
     }
 }
