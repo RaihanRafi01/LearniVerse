@@ -11,6 +11,8 @@ namespace DAL
 
 
         public DbSet<Student> students { get; set; }
-        
+
+        public DbSet<Guardian> guardians { get; set; }
+
     }
 }
