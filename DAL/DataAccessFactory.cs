@@ -25,9 +25,6 @@ namespace DAL
         {
             return new StudentRepo();
         }
-        public static IRepo<Payment, int, Payment> PaymentData()
-        {
-            return new PaymentRepo();
-        }
+       
     }
 }
