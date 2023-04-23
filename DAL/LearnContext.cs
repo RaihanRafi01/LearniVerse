@@ -11,5 +11,6 @@ namespace DAL
 
 
         public DbSet<Student> students { get; set; }
+        public DbSet<Payment> payments { get; set; }
     }
 }
