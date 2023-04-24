@@ -45,5 +45,15 @@ namespace DAL
             return new GuardianRepo();
         }
 
+        // AUTH
+        public static IAuthTeacher<bool> AuthTeacherData() 
+        {
+            return new TeacherRepo();
+        }
+        public static IRepo<TokenTeacher, string, TokenTeacher> TokenDataTeacher() 
+        {
+            return new TokenTeacherRepo();
+        }
+
     }
 }
