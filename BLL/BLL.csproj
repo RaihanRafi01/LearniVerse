@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\AdminDTO.cs" />
     <Compile Include="DTOs\CourseDTO.cs" />
     <Compile Include="DTOs\GuardianDTO.cs" />
     <Compile Include="DTOs\PaymentDTO.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="DTOs\TeacherDTO.cs" />
     <Compile Include="DTOs\TokenTeacherDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AdminService.cs" />
     <Compile Include="Services\AuthTeacherService.cs" />
     <Compile Include="Services\CourseService.cs" />
     <Compile Include="Services\GuardianService.cs" />

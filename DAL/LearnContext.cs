@@ -21,6 +21,8 @@ namespace DAL
 
         public DbSet<Result> results { get; set; }
 
+        public DbSet<Admin> admins { get; set; }
+
         // AUTH
 
         public DbSet<TokenTeacher> tokenTeachers { get; set; }

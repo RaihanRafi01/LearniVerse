@@ -22,6 +22,7 @@ namespace DAL
         }
 
 
+
         //Sufian
         public static IRepo<Student, int, Student> StudentData()
         {
@@ -48,6 +49,10 @@ namespace DAL
         public static IRepo<Result, int, Result> ResultData()
         {
             return new ResultRepo();
+        }
+        public static IRepo<Admin, int, Admin> AdminData()
+        {
+            return new AdminRepo();
         }
 
         // AUTH
