@@ -19,6 +19,8 @@ namespace DAL
         //mushfiq
         public DbSet<Guardian> guardians { get; set; }
 
+        public DbSet<Result> results { get; set; }
+
         // AUTH
 
         public DbSet<TokenTeacher> tokenTeachers { get; set; }
