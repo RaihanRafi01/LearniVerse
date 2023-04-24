@@ -6,6 +6,7 @@ namespace DAL
 {
     public class DataAccessFactory
     {
+        //Rafi
         public static IRepo<Teacher, int, Teacher> TeacherData()
         {
             return new TeacherRepo();
@@ -21,6 +22,7 @@ namespace DAL
         }
 
 
+        //Sufian
         public static IRepo<Student, int, Student> StudentData()
         {
             return new StudentRepo();
@@ -32,6 +34,8 @@ namespace DAL
         }
 
 
+
+        //mushfiq
         public static IRepo<Guardian, int, Guardian> GuardianData()
         {
             return new GuardianRepo();

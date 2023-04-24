@@ -1,7 +1,7 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
-using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DAL.Repos
 {
@@ -9,27 +9,34 @@ namespace DAL.Repos
     {
         public bool Delete(int id)
         {
-            throw new NotImplementedException();
+            var data = Get(id);
+            db.payments.Remove(data);
+            return db.SaveChanges() > 0;
         }
 
         public List<Payment> Get()
         {
-            throw new NotImplementedException();
+            return db.payments.ToList();
         }
 
         public Payment Get(int id)
         {
-            throw new NotImplementedException();
+            return db.payments.Find(id);
         }
 
         public Payment Insert(Payment obj)
         {
-            throw new NotImplementedException();
+            db.payments.Add(obj);
+            if (db.SaveChanges() > 0) return obj;
+            return null;
         }
 
         public Payment Update(Payment obj)
         {
-            throw new NotImplementedException();
+            var exdata = db.payments.Find(obj.Id);
+            db.Entry(exdata).CurrentValues.SetValues(obj);
+            if (db.SaveChanges() > 0) return obj;
+            return null;
         }
     }
 }

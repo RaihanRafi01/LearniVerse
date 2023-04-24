@@ -74,6 +74,10 @@
     <Compile Include="Migrations\202304231115357_Guardian.designer.cs">
       <DependentUpon>202304231115357_Guardian.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304240433432_add_Payment_table.cs" />
+    <Compile Include="Migrations\202304240433432_add_Payment_table.designer.cs">
+      <DependentUpon>202304240433432_add_Payment_table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Guardian.cs" />
@@ -110,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304231115357_Guardian.resx">
       <DependentUpon>202304231115357_Guardian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304240433432_add_Payment_table.resx">
+      <DependentUpon>202304240433432_add_Payment_table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
