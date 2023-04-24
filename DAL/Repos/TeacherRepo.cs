@@ -8,8 +8,15 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class TeacherRepo : Repo, IRepo<Teacher, int, Teacher>
+    internal class TeacherRepo : Repo, IRepo<Teacher, int, Teacher> , IAuthTeacher<bool>
     {
+        public bool Authenticate(string username, string password)
+        {
+            var data = db.teachers.FirstOrDefault(x => x.Name.Equals(username) && x.Password.Equals(password));
+            if (data != null ) return true;
+            return false;
+        }
+
         public bool Delete(int id)
         {
             var data = Get(id);
