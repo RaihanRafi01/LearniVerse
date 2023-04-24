@@ -17,7 +17,7 @@ namespace DAL.Models
         public DateTime Createtime { get; set; }
         public DateTime? ExpireTime { get; set; }
         [Required]
-        public string UserName { get; set; }
+        public string UserId { get; set; }
 
     }
 }

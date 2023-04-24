@@ -18,8 +18,9 @@ namespace BLL.Services
             var res = DataAccessFactory.AuthTeacherData().Authenticate(username, password);
             if (res) 
             {
+                //var extoken = DataAccessFactory.TokenDataTeacher().Get();
                 var token = new TokenTeacher();
-                token.UserName = username;
+                token.UserId = username;
                 token.Createtime = DateTime.Now;
                 token.TKey = Guid.NewGuid().ToString();
                 var ret = DataAccessFactory.TokenDataTeacher().Insert(token);
@@ -33,6 +34,26 @@ namespace BLL.Services
                 }
             }
             return null;
+        }
+        public static bool IsTokenValid(string tkey) 
+        {
+            var extoken = DataAccessFactory.TokenDataTeacher().Get(tkey);
+            if(extoken != null && extoken.ExpireTime == null) 
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool Logout(string tkey) 
+        {
+            var extoken = DataAccessFactory.TokenDataTeacher().Get(tkey);
+            extoken.ExpireTime = DateTime.Now;
+            if (DataAccessFactory.TokenDataTeacher().Update(extoken) != null) 
+            {
+                return true;
+            }
+            return false;
+            
         }
     }
 }

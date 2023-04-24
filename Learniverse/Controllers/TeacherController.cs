@@ -1,5 +1,6 @@
 ﻿using BLL.DTOs;
 using BLL.Services;
+using Learniverse.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Learniverse.Controllers
 {
     public class TeacherController : ApiController
     {
-
+        [LoggedTeacher]
         [HttpGet]
         [Route("api/teacher")]
         public HttpResponseMessage Get()
@@ -43,7 +44,7 @@ namespace Learniverse.Controllers
 
             }
         }
-
+       // [LoggedTeacher]
         [HttpPost]
         [Route("api/teacher/add")]
         public HttpResponseMessage Add(TeacherDTO obj)

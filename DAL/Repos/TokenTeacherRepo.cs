@@ -23,6 +23,7 @@ namespace DAL.Repos
 
         public TokenTeacher Get(string id)
         {
+            //throw new NotImplementedException();
             return db.tokenTeachers.FirstOrDefault(t => t.TKey.Equals(id));
         }
 
