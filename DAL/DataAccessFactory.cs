@@ -26,6 +26,12 @@ namespace DAL
             return new StudentRepo();
         }
 
+        public static IRepo<Payment, int, Payment> PaymentData()
+        {
+            return new PaymentRepo();
+        }
+
+
         public static IRepo<Guardian, int, Guardian> GuardianData()
         {
             return new GuardianRepo();
