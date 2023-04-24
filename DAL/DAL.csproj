@@ -99,6 +99,14 @@
     <Compile Include="Migrations\202304241537224_Admin table.designer.cs">
       <DependentUpon>202304241537224_Admin table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304241625288_Teacher_Ques_R.cs" />
+    <Compile Include="Migrations\202304241625288_Teacher_Ques_R.designer.cs">
+      <DependentUpon>202304241625288_Teacher_Ques_R.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304241646497_oneTOmany.cs" />
+    <Compile Include="Migrations\202304241646497_oneTOmany.designer.cs">
+      <DependentUpon>202304241646497_oneTOmany.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Course.cs" />
@@ -161,6 +169,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304241537224_Admin table.resx">
       <DependentUpon>202304241537224_Admin table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304241625288_Teacher_Ques_R.resx">
+      <DependentUpon>202304241625288_Teacher_Ques_R.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304241646497_oneTOmany.resx">
+      <DependentUpon>202304241646497_oneTOmany.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

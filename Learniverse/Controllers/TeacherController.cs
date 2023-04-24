@@ -10,9 +10,10 @@ using System.Web.Http;
 
 namespace Learniverse.Controllers
 {
+    [LoggedTeacher]
     public class TeacherController : ApiController
     {
-        [LoggedTeacher]
+        [AllowAnonymous]
         [HttpGet]
         [Route("api/teacher")]
         public HttpResponseMessage Get()
@@ -28,6 +29,7 @@ namespace Learniverse.Controllers
             }
 
         }
+       
         [HttpGet]
         [Route("api/teacher/{id}")]
         public HttpResponseMessage Get(int id)
@@ -44,7 +46,7 @@ namespace Learniverse.Controllers
 
             }
         }
-       // [LoggedTeacher]
+       
         [HttpPost]
         [Route("api/teacher/add")]
         public HttpResponseMessage Add(TeacherDTO obj)
