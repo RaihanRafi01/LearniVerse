@@ -78,11 +78,16 @@
     <Compile Include="Migrations\202304240433432_add_Payment_table.designer.cs">
       <DependentUpon>202304240433432_add_Payment_table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304241012526_add_table_Salary.cs" />
+    <Compile Include="Migrations\202304241012526_add_table_Salary.designer.cs">
+      <DependentUpon>202304241012526_add_table_Salary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Guardian.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Ques.cs" />
+    <Compile Include="Models\Salary.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,6 +96,7 @@
     <Compile Include="Repos\PaymentRepo.cs" />
     <Compile Include="Repos\QuesRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
+    <Compile Include="Repos\SalaryRepo.cs" />
     <Compile Include="Repos\StudentRepo.cs" />
     <Compile Include="Repos\TeacherRepo.cs" />
   </ItemGroup>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304240433432_add_Payment_table.resx">
       <DependentUpon>202304240433432_add_Payment_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304241012526_add_table_Salary.resx">
+      <DependentUpon>202304241012526_add_table_Salary.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

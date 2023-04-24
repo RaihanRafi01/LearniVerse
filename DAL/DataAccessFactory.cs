@@ -33,6 +33,10 @@ namespace DAL
             return new PaymentRepo();
         }
 
+        public static IRepo<Salary, int, Salary> SalaryData()
+        {
+            return new SalaryRepo();
+        }
 
 
         //mushfiq

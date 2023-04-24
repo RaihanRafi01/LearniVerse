@@ -48,6 +48,7 @@
     <Compile Include="DTOs\GuardianDTO.cs" />
     <Compile Include="DTOs\PaymentDTO.cs" />
     <Compile Include="DTOs\QuesDTO.cs" />
+    <Compile Include="DTOs\SalaryDTO.cs" />
     <Compile Include="DTOs\StudentDTO.cs" />
     <Compile Include="DTOs\TeacherDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="Services\GuardianService.cs" />
     <Compile Include="Services\PaymentService.cs" />
     <Compile Include="Services\QuesService.cs" />
+    <Compile Include="Services\SalaryService.cs" />
     <Compile Include="Services\StudentService.cs" />
     <Compile Include="Services\TeacherService.cs" />
   </ItemGroup>
