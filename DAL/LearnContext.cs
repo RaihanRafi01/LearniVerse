@@ -13,6 +13,7 @@ namespace DAL
         //Sufian
         public DbSet<Student> students { get; set; }
         public DbSet<Payment> payments { get; set; }
+        public DbSet<Salary> salarys { get; set; }
 
 
         //mushfiq
