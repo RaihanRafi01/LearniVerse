@@ -83,7 +83,7 @@
     <Compile Include="Migrations\202304240933021_tokenTEACHER.cs" />
     <Compile Include="Migrations\202304240933021_tokenTEACHER.designer.cs">
       <DependentUpon>202304240933021_tokenTEACHER.cs</DependentUpon>
-
+    </Compile>
     <Compile Include="Migrations\202304241012526_add_table_Salary.cs" />
     <Compile Include="Migrations\202304241012526_add_table_Salary.designer.cs">
       <DependentUpon>202304241012526_add_table_Salary.cs</DependentUpon>
@@ -136,10 +136,9 @@
 
     <EmbeddedResource Include="Migrations\202304240933021_tokenTEACHER.resx">
       <DependentUpon>202304240933021_tokenTEACHER.cs</DependentUpon>
-
+	</EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304241012526_add_table_Salary.resx">
       <DependentUpon>202304241012526_add_table_Salary.cs</DependentUpon>
-
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
