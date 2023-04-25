@@ -58,6 +58,7 @@
     <Compile Include="Services\AdminService.cs" />
     <Compile Include="Services\AuthTeacherService.cs" />
     <Compile Include="Services\CourseService.cs" />
+    <Compile Include="Services\EmailService.cs" />
     <Compile Include="Services\GuardianService.cs" />
     <Compile Include="Services\PaymentService.cs" />
     <Compile Include="Services\QuesService.cs" />
