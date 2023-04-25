@@ -16,13 +16,13 @@ namespace BLL.Services
             Random rnd = new Random();
             int randomNumber = rnd.Next(100000, 1000000);
             var data = DataAccessFactory.TeacherData().Get(id);
-            string email = data.Email;
+            
             //string email = "r.rafi.aiub@gmail.com";
-            if (email == null)
+            if (data == null)
             {
                 return false;
             }
-
+            string email = data.Email;
             var fromAddress = new MailAddress("dotnet193@gmail.com", "Zero Hunger");
             var toAddress = new MailAddress(email, "xyz");
             const string fromPassword = "nocwlctpslfhwvov";
