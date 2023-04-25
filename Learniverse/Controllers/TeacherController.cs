@@ -109,5 +109,22 @@ namespace Learniverse.Controllers
 
             }
         }
+
+        [HttpPost]
+        [Route("api/teacher/mail/{id}")]
+        public HttpResponseMessage Mail(int id)
+        {
+            try
+            {
+
+                return Request.CreateResponse(HttpStatusCode.OK, EmailService.SendEmail(id));
+            }
+            catch (Exception ex)
+            {
+
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+
+            }
+        }
     }
 }
