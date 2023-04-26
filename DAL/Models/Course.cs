@@ -14,11 +14,6 @@ namespace DAL.Models
         public string Name { get; set; }
         public string Category { get; set; }
         public float Price { get; set; }
-        public virtual ICollection<Teacher> Teachers { get; set; }
-        public Course()
-        {
-            Teachers = new List<Teacher>();
-        }
-
+       
     }
 }

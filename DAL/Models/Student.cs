@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL.Models
 {
@@ -13,11 +14,7 @@ namespace DAL.Models
         public string Gender { get; set; }
         public string Contact { get; set; }
         public string Address { get; set; }
-
-        public virtual ICollection<Teacher> Teachers { get; set; }
-        public Student()
-        {
-            Teachers = new List<Teacher>();
-        }
+        
+       
     }
 }

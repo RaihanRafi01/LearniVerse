@@ -107,6 +107,10 @@
     <Compile Include="Migrations\202304241646497_oneTOmany.designer.cs">
       <DependentUpon>202304241646497_oneTOmany.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304261343153_removing all Relation.cs" />
+    <Compile Include="Migrations\202304261343153_removing all Relation.designer.cs">
+      <DependentUpon>202304261343153_removing all Relation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Course.cs" />
@@ -175,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304241646497_oneTOmany.resx">
       <DependentUpon>202304241646497_oneTOmany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304261343153_removing all Relation.resx">
+      <DependentUpon>202304261343153_removing all Relation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

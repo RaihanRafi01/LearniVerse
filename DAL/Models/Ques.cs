@@ -18,10 +18,6 @@ namespace DAL.Models
         public string Option4 { get; set; }
         public string CorrectAns { get; set; }
 
-        public virtual ICollection<Teacher> Teachers { get; set; }
-        public Ques() 
-        {
-            Teachers = new List<Teacher>();
-        }
+       
     }
 }

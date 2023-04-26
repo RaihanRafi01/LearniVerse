@@ -18,21 +18,7 @@ namespace DAL.Models
         public string Gender { get; set; }
         public string Contact { get; set; }
         public string Address { get; set; }
-        [ForeignKey("Ques")]
-        public int QId { get; set; }
-        public virtual Ques Ques { get; set; }
-
-        [ForeignKey("Course")]
-        public int CId { get; set; }
-        public virtual Course Course { get; set; }
-
-        [ForeignKey("Student")]
-        public int SId { get; set; }
-        public virtual Student Student { get; set; }
-
-        [ForeignKey("Guardian")]
-        public int GId { get; set; }
-        public virtual Guardian Guardian { get; set; }
+        
 
     }
 }

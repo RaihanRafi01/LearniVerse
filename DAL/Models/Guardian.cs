@@ -16,11 +16,8 @@ namespace DAL.Models
         public int Gender { get; set; }
         public string PhoneNumber { get; set; }
         public string Address { get; set; }
-        public virtual ICollection<Teacher> Teachers { get; set; }
-        public Guardian()
-        {
-            Teachers = new List<Teacher>();
-        }
+        
+        
 
 
     }
