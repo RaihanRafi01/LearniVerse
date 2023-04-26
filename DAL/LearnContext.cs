@@ -27,5 +27,11 @@ namespace DAL
 
         public DbSet<TokenTeacher> tokenTeachers { get; set; }
 
+
+        /// relation
+        /// StGu
+        public DbSet<StGu> stGus { get; set; }
+        public DbSet<QuizResult> QuizResults { get; set; }
+
     }
 }

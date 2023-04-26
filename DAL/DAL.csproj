@@ -111,14 +111,68 @@
     <Compile Include="Migrations\202304261343153_removing all Relation.designer.cs">
       <DependentUpon>202304261343153_removing all Relation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304261350161_Te_st_R.cs" />
+    <Compile Include="Migrations\202304261350161_Te_st_R.designer.cs">
+      <DependentUpon>202304261350161_Te_st_R.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304261353344_Te_gu_R.cs" />
+    <Compile Include="Migrations\202304261353344_Te_gu_R.designer.cs">
+      <DependentUpon>202304261353344_Te_gu_R.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304261452136_up1.cs" />
+    <Compile Include="Migrations\202304261452136_up1.designer.cs">
+      <DependentUpon>202304261452136_up1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304261459324_u02.cs" />
+    <Compile Include="Migrations\202304261459324_u02.designer.cs">
+      <DependentUpon>202304261459324_u02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304261502019_finalRe.cs" />
+    <Compile Include="Migrations\202304261502019_finalRe.designer.cs">
+      <DependentUpon>202304261502019_finalRe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304261523587_studentPayment.cs" />
+    <Compile Include="Migrations\202304261523587_studentPayment.designer.cs">
+      <DependentUpon>202304261523587_studentPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304261534569_tea_stu_Ques.cs" />
+    <Compile Include="Migrations\202304261534569_tea_stu_Ques.designer.cs">
+      <DependentUpon>202304261534569_tea_stu_Ques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304261543004_resQues.cs" />
+    <Compile Include="Migrations\202304261543004_resQues.designer.cs">
+      <DependentUpon>202304261543004_resQues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304261550594_up11.cs" />
+    <Compile Include="Migrations\202304261550594_up11.designer.cs">
+      <DependentUpon>202304261550594_up11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304261555520_quizresult.cs" />
+    <Compile Include="Migrations\202304261555520_quizresult.designer.cs">
+      <DependentUpon>202304261555520_quizresult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304261611007_Student_QuizResult.cs" />
+    <Compile Include="Migrations\202304261611007_Student_QuizResult.designer.cs">
+      <DependentUpon>202304261611007_Student_QuizResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304261614298_Teacher_Sal.cs" />
+    <Compile Include="Migrations\202304261614298_Teacher_Sal.designer.cs">
+      <DependentUpon>202304261614298_Teacher_Sal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304261623251_teacherStudent_Course.cs" />
+    <Compile Include="Migrations\202304261623251_teacherStudent_Course.designer.cs">
+      <DependentUpon>202304261623251_teacherStudent_Course.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Guardian.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Ques.cs" />
+    <Compile Include="Models\QuizResult.cs" />
     <Compile Include="Models\Result.cs" />
     <Compile Include="Models\Salary.cs" />
+    <Compile Include="Models\StGu.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Models\TokenTeacher.cs" />
@@ -182,6 +236,45 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304261343153_removing all Relation.resx">
       <DependentUpon>202304261343153_removing all Relation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304261350161_Te_st_R.resx">
+      <DependentUpon>202304261350161_Te_st_R.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304261353344_Te_gu_R.resx">
+      <DependentUpon>202304261353344_Te_gu_R.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304261452136_up1.resx">
+      <DependentUpon>202304261452136_up1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304261459324_u02.resx">
+      <DependentUpon>202304261459324_u02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304261502019_finalRe.resx">
+      <DependentUpon>202304261502019_finalRe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304261523587_studentPayment.resx">
+      <DependentUpon>202304261523587_studentPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304261534569_tea_stu_Ques.resx">
+      <DependentUpon>202304261534569_tea_stu_Ques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304261543004_resQues.resx">
+      <DependentUpon>202304261543004_resQues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304261550594_up11.resx">
+      <DependentUpon>202304261550594_up11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304261555520_quizresult.resx">
+      <DependentUpon>202304261555520_quizresult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304261611007_Student_QuizResult.resx">
+      <DependentUpon>202304261611007_Student_QuizResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304261614298_Teacher_Sal.resx">
+      <DependentUpon>202304261614298_Teacher_Sal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304261623251_teacherStudent_Course.resx">
+      <DependentUpon>202304261623251_teacherStudent_Course.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

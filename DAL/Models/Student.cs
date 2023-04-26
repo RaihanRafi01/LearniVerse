@@ -14,7 +14,23 @@ namespace DAL.Models
         public string Gender { get; set; }
         public string Contact { get; set; }
         public string Address { get; set; }
-        
+
+        public virtual ICollection<StGu> StGus { get; set; }
+        public virtual ICollection<Payment> Payments { get; set; }
+        public virtual ICollection<QuizResult> QuizResults { get; set; }
+        public virtual ICollection<Course> Courses { get; set; }
+
+        public Student()
+        {
+            StGus = new List<StGu>();
+            Payments = new List<Payment>();
+            QuizResults = new List<QuizResult>();
+            Courses = new List<Course>();
+
+        }
+
        
+       
+
     }
 }
