@@ -163,6 +163,10 @@
     <Compile Include="Migrations\202304261623251_teacherStudent_Course.designer.cs">
       <DependentUpon>202304261623251_teacherStudent_Course.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304271148405_StGu and QuizResult.cs" />
+    <Compile Include="Migrations\202304271148405_StGu and QuizResult.designer.cs">
+      <DependentUpon>202304271148405_StGu and QuizResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Course.cs" />
@@ -182,9 +186,11 @@
     <Compile Include="Repos\GuardianRepo.cs" />
     <Compile Include="Repos\PaymentRepo.cs" />
     <Compile Include="Repos\QuesRepo.cs" />
+    <Compile Include="Repos\QuizResultRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\ResultRepo.cs" />
     <Compile Include="Repos\SalaryRepo.cs" />
+    <Compile Include="Repos\StGuRepo.cs" />
     <Compile Include="Repos\StudentRepo.cs" />
     <Compile Include="Repos\TeacherRepo.cs" />
     <Compile Include="Repos\TokenTeacherRepo.cs" />
@@ -275,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304261623251_teacherStudent_Course.resx">
       <DependentUpon>202304261623251_teacherStudent_Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304271148405_StGu and QuizResult.resx">
+      <DependentUpon>202304271148405_StGu and QuizResult.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,7 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
 using DAL.Repos;
+using System;
 
 namespace DAL
 {
@@ -63,6 +64,16 @@ namespace DAL
         public static IRepo<TokenTeacher, string, TokenTeacher> TokenDataTeacher() 
         {
             return new TokenTeacherRepo();
+        }
+
+        //MOHOK
+        public static IRepo<StGu, int, StGu> StGuData()
+        {
+            return new StGuRepo();
+        }
+        public static IRepo<QuizResult, int, QuizResult> QuizResultData()
+        {
+            return new QuizResultRepo();
         }
 
     }
