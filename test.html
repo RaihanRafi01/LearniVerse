@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+    var app = angular.module("my-app", []);
+    app.controller('newCtrl', function ($scope, $http) {
+        $http.get("https://localhost:44377/api/student").then(function (resp) {
+            $scope.students = resp.data;
+        },
+            function (err) {
+                debugger;
+            });
+    });
+
+</script>
+<body ng-app="my-app">
+    <div ng-controller="newCtrl">
+        <table border=1 style="border-collapse:collapse">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+            <tr ng-repeat="p in students">
+                <td>{{p.Id}}</td>
+                <td>{{p.Name}}</td>
+                <td>{{p.Email}}</td>
+
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

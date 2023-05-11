@@ -23,8 +23,8 @@ namespace BLL.Services
                 return false;
             }
             string email = data.Email;
-            var fromAddress = new MailAddress("dotnet193@gmail.com", "Zero Hunger");
-            var toAddress = new MailAddress(email, "xyz");
+            var fromAddress = new MailAddress("dotnet193@gmail.com", "Learniverse");
+            var toAddress = new MailAddress(email,data.Name);
             const string fromPassword = "nocwlctpslfhwvov";
             const string subject = "Reset Password Email";
             string body = "Your OTP is : " + randomNumber;

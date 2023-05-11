@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace Learniverse.Controllers
 {
-    [LoggedTeacher]
+    //[LoggedTeacher]
     public class TeacherController : ApiController
     {
         [AllowAnonymous]

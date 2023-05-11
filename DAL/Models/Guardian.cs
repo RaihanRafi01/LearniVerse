@@ -19,10 +19,10 @@ namespace DAL.Models
         public string Address { get; set; }
         
 
-        public virtual ICollection<StGu> StGus { get; set; }
+        public virtual ICollection<StudentGuardianTeacher> StGus { get; set; }
         public Guardian()
         {
-            StGus = new List<StGu>();
+            StGus = new List<StudentGuardianTeacher>();
 
         }
 

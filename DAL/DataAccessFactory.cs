@@ -67,9 +67,9 @@ namespace DAL
         }
 
         //MOHOK
-        public static IRepo<StGu, int, StGu> StGuData()
+        public static IRepo<StudentGuardianTeacher, int, StudentGuardianTeacher> StGuData()
         {
-            return new StGuRepo();
+            return new StGuTeRepo();
         }
         public static IRepo<QuizResult, int, QuizResult> QuizResultData()
         {

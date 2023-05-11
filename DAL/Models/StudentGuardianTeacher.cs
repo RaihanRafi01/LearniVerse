@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    public class StGu
+    public class StudentGuardianTeacher
     {
         public int Id { get; set; }
         [ForeignKey("Student")]

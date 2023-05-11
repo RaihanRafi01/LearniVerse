@@ -40,9 +40,24 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.9\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.9\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -167,6 +182,10 @@
     <Compile Include="Migrations\202304271148405_StGu and QuizResult.designer.cs">
       <DependentUpon>202304271148405_StGu and QuizResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305111626476_edit_table_name.cs" />
+    <Compile Include="Migrations\202305111626476_edit_table_name.designer.cs">
+      <DependentUpon>202305111626476_edit_table_name.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Course.cs" />
@@ -176,7 +195,7 @@
     <Compile Include="Models\QuizResult.cs" />
     <Compile Include="Models\Result.cs" />
     <Compile Include="Models\Salary.cs" />
-    <Compile Include="Models\StGu.cs" />
+    <Compile Include="Models\StudentGuardianTeacher.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Models\TokenTeacher.cs" />
@@ -190,7 +209,7 @@
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\ResultRepo.cs" />
     <Compile Include="Repos\SalaryRepo.cs" />
-    <Compile Include="Repos\StGuRepo.cs" />
+    <Compile Include="Repos\StGuTeRepo.cs" />
     <Compile Include="Repos\StudentRepo.cs" />
     <Compile Include="Repos\TeacherRepo.cs" />
     <Compile Include="Repos\TokenTeacherRepo.cs" />
@@ -284,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304271148405_StGu and QuizResult.resx">
       <DependentUpon>202304271148405_StGu and QuizResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305111626476_edit_table_name.resx">
+      <DependentUpon>202305111626476_edit_table_name.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class StGuRepo : Repo, IRepo<StGu, int, StGu>
+    internal class StGuTeRepo : Repo, IRepo<StudentGuardianTeacher, int, StudentGuardianTeacher>
     {
         public bool Delete(int id)
         {
@@ -17,24 +17,24 @@ namespace DAL.Repos
             return db.SaveChanges() > 0;
         }
 
-        public List<StGu> Get()
+        public List<StudentGuardianTeacher> Get()
         {
             return db.stGus.ToList();
         }
 
-        public StGu Get(int id)
+        public StudentGuardianTeacher Get(int id)
         {
             return db.stGus.Find(id);
         }
 
-        public StGu Insert(StGu obj)
+        public StudentGuardianTeacher Insert(StudentGuardianTeacher obj)
         {
             db.stGus.Add(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
         }
 
-        public StGu Update(StGu obj)
+        public StudentGuardianTeacher Update(StudentGuardianTeacher obj)
         {
             var exdata = db.stGus.Find(obj.Id);
             db.Entry(exdata).CurrentValues.SetValues(obj);

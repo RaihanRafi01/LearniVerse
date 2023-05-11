@@ -19,6 +19,7 @@ namespace Learniverse
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.EnableCors();
         }
     }
 }

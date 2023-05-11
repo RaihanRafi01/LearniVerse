@@ -12,51 +12,51 @@ namespace BLL.Services
 {
     public class StGuService
     {
-        public static List<StGuDTO> Get()
+        public static List<StGuTeDTO> Get()
         {
             var data = DataAccessFactory.StGuData().Get();
             var config = new MapperConfiguration(c =>
             {
-                c.CreateMap<StGu, StGuDTO>();
+                c.CreateMap<StudentGuardianTeacher, StGuTeDTO>();
             });
             var mapper = new Mapper(config);
-            var mapped = mapper.Map<List<StGuDTO>>(data);
+            var mapped = mapper.Map<List<StGuTeDTO>>(data);
             return mapped;
         }
 
-        public static StGuDTO Get(int id)
+        public static StGuTeDTO Get(int id)
         {
             var data = DataAccessFactory.StGuData().Get(id);
             var config = new MapperConfiguration(c =>
             {
-                c.CreateMap<StGu, StGuDTO>();
+                c.CreateMap<StudentGuardianTeacher, StGuTeDTO>();
             });
             var mapper = new Mapper(config);
-            var mapped = mapper.Map<StGuDTO>(data);
+            var mapped = mapper.Map<StGuTeDTO>(data);
             return mapped;
         }
 
-        public static bool Create(StGuDTO StGu)
+        public static bool Create(StGuTeDTO StGu)
         {
             var config = new MapperConfiguration(c =>
             {
-                c.CreateMap<StGuDTO, StGu>();
+                c.CreateMap<StGuTeDTO, StudentGuardianTeacher>();
             });
             var mapper = new Mapper(config);
-            var mapped = mapper.Map<StGu>(StGu);
+            var mapped = mapper.Map<StudentGuardianTeacher>(StGu);
             var res = DataAccessFactory.StGuData().Insert(mapped);
             if (res != null) return true;
             return false;
         }
 
-        public static bool Update(StGuDTO StGu)
+        public static bool Update(StGuTeDTO StGu)
         {
             var config = new MapperConfiguration(c =>
             {
-                c.CreateMap<StGuDTO, StGu>();
+                c.CreateMap<StGuTeDTO, StudentGuardianTeacher>();
             });
             var mapper = new Mapper(config);
-            var mapped = mapper.Map<StGu>(StGu);
+            var mapped = mapper.Map<StudentGuardianTeacher>(StGu);
             var res = DataAccessFactory.StGuData().Update(mapped);
             if (res != null) return true;
             return false;

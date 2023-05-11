@@ -30,7 +30,7 @@ namespace DAL
 
         /// relation
         /// StGu
-        public DbSet<StGu> stGus { get; set; }
+        public DbSet<StudentGuardianTeacher> stGus { get; set; }
         public DbSet<QuizResult> QuizResults { get; set; }
 
     }

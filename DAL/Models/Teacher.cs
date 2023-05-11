@@ -21,12 +21,12 @@ namespace DAL.Models
 
 
         public virtual ICollection<Ques> Ques { get; set; }
-        public virtual ICollection<StGu> StGus { get; set; }
+        public virtual ICollection<StudentGuardianTeacher> StGus { get; set; }
         public virtual ICollection<Salary> Salaries { get; set; }
         public virtual ICollection<Course> Courses { get; set; }
         public Teacher()
         {
-            StGus = new List<StGu>();
+            StGus = new List<StudentGuardianTeacher>();
             Ques = new List<Ques>();
             Salaries = new List<Salary>();
             Courses = new List<Course>();

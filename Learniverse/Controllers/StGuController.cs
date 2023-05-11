@@ -46,7 +46,7 @@ namespace Learniverse.Controllers
 
         [HttpPost]
         [Route("api/stGu/add")]
-        public HttpResponseMessage Add(StGuDTO obj)
+        public HttpResponseMessage Add(StGuTeDTO obj)
         {
             try
             {
@@ -69,7 +69,7 @@ namespace Learniverse.Controllers
 
         [HttpPost]
         [Route("api/stGu/update")]
-        public HttpResponseMessage Update(StGuDTO obj)
+        public HttpResponseMessage Update(StGuTeDTO obj)
         {
             try
             {
