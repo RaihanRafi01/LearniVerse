@@ -7,13 +7,16 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Learniverse.Controllers
 {
     //[LoggedTeacher]
+    [EnableCors("*", "*", "*")]
     public class TeacherController : ApiController
     {
-        [AllowAnonymous]
+        [LoggedTeacher]
+        //[AllowAnonymous]
         [HttpGet]
         [Route("api/teacher")]
         public HttpResponseMessage Get()
