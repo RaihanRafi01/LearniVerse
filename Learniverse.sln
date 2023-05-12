@@ -9,16 +9,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{AD286B70-D620-4929-BBD1-F566FFD8F1FA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{99D8B4A1-4EA5-4954-A7A2-EF4F8DEFB647}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontendsdsd", "Frontendsdsd", "{99D8B4A1-4EA5-4954-A7A2-EF4F8DEFB647}"
 	ProjectSection(SolutionItems) = preProject
-		test.html = test.html
 		remove pls.html = remove pls.html
+		test.html = test.html
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sufian Delete", "Sufian Delete", "{B56749B2-1441-4BC3-96CD-5B467B8907AE}"
 	ProjectSection(SolutionItems) = preProject
 		ki bhai.html = ki bhai.html
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFrontend", "Frontend\WebFrontend.csproj", "{DB036126-D44A-4327-84EE-90D3121BBC46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{AD286B70-D620-4929-BBD1-F566FFD8F1FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD286B70-D620-4929-BBD1-F566FFD8F1FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD286B70-D620-4929-BBD1-F566FFD8F1FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB036126-D44A-4327-84EE-90D3121BBC46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB036126-D44A-4327-84EE-90D3121BBC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB036126-D44A-4327-84EE-90D3121BBC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB036126-D44A-4327-84EE-90D3121BBC46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
