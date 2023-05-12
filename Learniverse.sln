@@ -11,9 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{99D8B4A1-4EA5-4954-A7A2-EF4F8DEFB647}"
 	ProjectSection(SolutionItems) = preProject
-		Login.html = Login.html
-		Logout.html = Logout.html
 		test.html = test.html
+		remove pls.html = remove pls.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sufian Delete", "Sufian Delete", "{B56749B2-1441-4BC3-96CD-5B467B8907AE}"
+	ProjectSection(SolutionItems) = preProject
+		ki bhai.html = ki bhai.html
 	EndProjectSection
 EndProject
 Global
