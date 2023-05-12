@@ -107,6 +107,7 @@
     <Compile Include="Controllers\QuizResultController.cs" />
     <Compile Include="Controllers\ResultController.cs" />
     <Compile Include="Controllers\SalaryController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\StGuController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />

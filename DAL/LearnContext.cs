@@ -33,5 +33,8 @@ namespace DAL
         public DbSet<StudentGuardianTeacher> stGus { get; set; }
         public DbSet<QuizResult> QuizResults { get; set; }
 
+        // search
+
+        public DbSet<Search> searches { get; set; }
     }
 }

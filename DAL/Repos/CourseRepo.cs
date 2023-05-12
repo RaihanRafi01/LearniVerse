@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class CourseRepo : Repo, IRepo<Course, int, Course>
+    internal class CourseRepo : Repo, IRepo<Course, string, Course>
     {
-        public bool Delete(int id)
+        public bool Delete(string course)
         {
-            var data = Get(id);
+            var data = Get(course);
             db.courses.Remove(data);
             return db.SaveChanges() > 0;
         }
@@ -22,9 +22,10 @@ namespace DAL.Repos
             return db.courses.ToList();
         }
 
-        public Course Get(int id)
+        public Course Get(string course)
         {
-            return db.courses.Find(id);
+            
+            return db.courses.FirstOrDefault(c => c.Name == course);
         }
 
         public Course Insert(Course obj)

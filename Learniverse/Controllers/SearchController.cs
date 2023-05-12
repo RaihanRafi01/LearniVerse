@@ -9,15 +9,15 @@ using System.Web.Http;
 
 namespace Learniverse.Controllers
 {
-    public class CourseController : ApiController
+    public class SearchController : ApiController
     {
         [HttpGet]
-        [Route("api/course")]
+        [Route("api/search")]
         public HttpResponseMessage Get()
         {
             try
             {
-                var data = CourseService.Get();
+                var data = SearchService.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -26,9 +26,8 @@ namespace Learniverse.Controllers
             }
 
         }
-        
-        [HttpGet]
-        [Route("api/course/{course}")]
+        [HttpPost]
+        [Route("api/search/{course}")]
         public HttpResponseMessage Get(string course)
         {
             try
@@ -45,12 +44,12 @@ namespace Learniverse.Controllers
         }
 
         [HttpPost]
-        [Route("api/course/add")]
-        public HttpResponseMessage Add(CourseDTO obj)
+        [Route("api/Search/add")]
+        public HttpResponseMessage Add(SearchDTO obj)
         {
             try
             {
-                var res = CourseService.Create(obj);
+                var res = SearchService.Create(obj);
                 if (res)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Inserted", Data = obj });
@@ -64,46 +63,6 @@ namespace Learniverse.Controllers
             {
 
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = obj });
-            }
-        }
-
-        [HttpPost]
-        [Route("api/course/update")]
-        public HttpResponseMessage Update(CourseDTO obj)
-        {
-            try
-            {
-                var res = CourseService.Update(obj);
-                if (res)
-                {
-                    return Request.CreateResponse(HttpStatusCode.OK, new { Msg = "Updated", Data = obj });
-                }
-                else
-                {
-                    return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = "Not Updated", Data = obj });
-                }
-            }
-            catch (Exception ex)
-            {
-
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message, Data = obj });
-            }
-        }
-
-        [HttpPost]
-        [Route("api/course/delete/{id}")]
-        public HttpResponseMessage Delete(string id)
-        {
-            try
-            {
-
-                return Request.CreateResponse(HttpStatusCode.OK, CourseService.Delete(id));
-            }
-            catch (Exception ex)
-            {
-
-                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
-
             }
         }
     }

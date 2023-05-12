@@ -24,9 +24,9 @@ namespace BLL.Services
             return mapped;
         }
 
-        public static CourseDTO Get(int id)
+        public static CourseDTO Get(string course)
         {
-            var data = DataAccessFactory.CourseData().Get(id);
+            var data = DataAccessFactory.CourseData().Get(course);
             var config = new MapperConfiguration(c =>
             {
                 c.CreateMap<Course, CourseDTO>();
@@ -61,7 +61,7 @@ namespace BLL.Services
             if (res != null) return true;
             return false;
         }
-        public static bool Delete(int id)
+        public static bool Delete(string id)
         {
             return DataAccessFactory.CourseData().Delete(id);
         }

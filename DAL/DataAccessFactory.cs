@@ -13,7 +13,7 @@ namespace DAL
             return new TeacherRepo();
         }
 
-        public static IRepo<Course, int, Course> CourseData()
+        public static IRepo<Course, string, Course> CourseData()
         {
             return new CourseRepo();
         }
@@ -74,6 +74,10 @@ namespace DAL
         public static IRepo<QuizResult, int, QuizResult> QuizResultData()
         {
             return new QuizResultRepo();
+        }
+        public static IRepo<Search, string, Search> SearchData()
+        {
+            return new SearchRepo();
         }
 
     }
