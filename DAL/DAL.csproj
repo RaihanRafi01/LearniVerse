@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="Interfaces\IAuthStudent.cs" />
     <Compile Include="Interfaces\IAuthTeacher.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="LearnContext.cs" />
@@ -189,6 +190,10 @@
     <Compile Include="Migrations\202305121141260_searchdb.cs" />
     <Compile Include="Migrations\202305121141260_searchdb.designer.cs">
       <DependentUpon>202305121141260_searchdb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305121811443_edit_guardian.cs" />
+    <Compile Include="Migrations\202305121811443_edit_guardian.designer.cs">
+      <DependentUpon>202305121811443_edit_guardian.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -315,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305121141260_searchdb.resx">
       <DependentUpon>202305121141260_searchdb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305121811443_edit_guardian.resx">
+      <DependentUpon>202305121811443_edit_guardian.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

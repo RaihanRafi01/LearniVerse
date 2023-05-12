@@ -5,8 +5,15 @@ using System.Linq;
 
 namespace DAL.Repos
 {
-    internal class StudentRepo : Repo, IRepo<Student, int, Student>
+    internal class StudentRepo : Repo, IRepo<Student, int, Student> , IAuthStudent<bool>
     {
+        public bool Authenticate(string username, string password)
+        {
+            var data = db.students.FirstOrDefault(x => x.Name.Equals(username) && x.Password.Equals(password));
+            if (data != null) return true;
+            return false;
+        }
+
         public bool Delete(int id)
         {
             var data = Get(id);

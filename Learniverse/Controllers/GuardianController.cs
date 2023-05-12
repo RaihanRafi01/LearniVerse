@@ -6,14 +6,16 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Learniverse.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class GuardianController : ApiController
     {
 
         [HttpGet]
-        [Route("api/Guardian")]
+        [Route("api/guardian")]
         public HttpResponseMessage Get()
         {
             try
@@ -28,7 +30,7 @@ namespace Learniverse.Controllers
 
         }
         [HttpGet]
-        [Route("api/Guardian/{id}")]
+        [Route("api/guardian/{id}")]
         public HttpResponseMessage Get(int id)
         {
             try
@@ -45,7 +47,7 @@ namespace Learniverse.Controllers
         }
 
         [HttpPost]
-        [Route("api/Guardian/add")]
+        [Route("api/guardian/add")]
         public HttpResponseMessage Add(GuardianDTO obj)
         {
             try
@@ -68,7 +70,7 @@ namespace Learniverse.Controllers
         }
 
         [HttpPost]
-        [Route("api/Guardian/update")]
+        [Route("api/guardian/update")]
         public HttpResponseMessage Update(GuardianDTO obj)
         {
             try
@@ -91,7 +93,7 @@ namespace Learniverse.Controllers
         }
 
         [HttpPost]
-        [Route("api/Guardian/delete/{id}")]
+        [Route("api/guardian/delete/{id}")]
         public HttpResponseMessage Delete(int id)
         {
             try

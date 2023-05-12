@@ -65,6 +65,10 @@ namespace DAL
         {
             return new TokenTeacherRepo();
         }
+        public static IAuthStudent<bool> AuthStudentData()
+        {
+            return new StudentRepo();
+        }
 
         //MOHOK
         public static IRepo<StudentGuardianTeacher, int, StudentGuardianTeacher> StGuData()
