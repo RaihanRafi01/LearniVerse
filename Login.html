@@ -2,7 +2,7 @@
 <html lang="en-US">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <script>
-		var app = angular.module("my-app",[]);
+		var app = angular.module("learniverse",[]);
 
 		app.factory('interceptor',[function(){
 			var interceptor = {
@@ -37,46 +37,14 @@
 			};
 		});
 		
-		app.controller('postCmntCtrl',function($scope,$http){
-			$scope.load=function(){
-                //debugger;
-                $http.get("https://localhost:44377/api/teacher").then(function(resp){
-					$scope.teacher = resp.data;
-				},function(err){
-					$scope.msg = err.data.Msg;
-				});
-			};
-
-		});
-		
-
 </script>
-<body ng-app="my-app">
+<body ng-app="learniverse">
 	<div ng-controller="loginCtrl">
 		<form ng-submit="login()">
 			<input type="text" ng-model="l.Username" placeholder="Username"> <br>
 			<input type="password" ng-model="l.Password" placeholder="Password"> <br>
 			<input type="submit">
 		</form>
-	</div>
-
-	<div ng-controller="postCmntCtrl">
-		<h2>{{msg}}</h2>
-		<button ng-click="load()">
-			Load<button>
-				<table border=1 style="border-collapse:collapse">
-					<tr>
-						<th>Id</th>
-						<th>Name</th>
-						<th>Email</th>
-					</tr>
-					<tr ng-repeat="p in teacher">
-						<td>{{p.Id}}</td>
-						<td>{{p.Name}}</td>
-						<td>{{p.Email}}</td>
-
-					</tr>
-				</table>
 	</div>
 
 </body>
