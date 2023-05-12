@@ -21,7 +21,7 @@ namespace DAL.Repos
             return db.searches.ToList();
         }
 
-       
+
         public Search Get(string id)
         {
             return db.searches.Find(id);
@@ -30,7 +30,7 @@ namespace DAL.Repos
         public Search Insert(Search obj)
         {
             var match = db.searches.Count(c => c.SearchName == obj.SearchName);
-            if (match > 0) 
+            if (match > 0)
             {
                 var upd = (from s in db.searches
                            where s.SearchName == obj.SearchName
@@ -40,13 +40,13 @@ namespace DAL.Repos
                 obj.SearchName = upd.SearchName;
                 db.Entry(upd).CurrentValues.SetValues(obj);
                 db.SaveChanges();
-               
+
             }
             else if (match == 0)
             {
                 db.searches.Add(obj);
                 db.SaveChanges();
-               
+
             }
             return obj;
         }
