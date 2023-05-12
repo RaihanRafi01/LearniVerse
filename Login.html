@@ -23,7 +23,7 @@
 		app.config(function($httpProvider){
 			$httpProvider.interceptors.push('interceptor');
 		});
-
+		//
 		app.controller('loginCtrl',function($scope,$http){
 			$scope.login=function(){
 				var v = $scope.l;
