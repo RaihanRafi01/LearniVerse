@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontendsdsd", "Frontendsds
 		test.html = test.html
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFrontend", "WebFrontend\WebFrontend.csproj", "{153B66EF-3EF5-4D70-9B8A-A3E4F83D345D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{AD286B70-D620-4929-BBD1-F566FFD8F1FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD286B70-D620-4929-BBD1-F566FFD8F1FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD286B70-D620-4929-BBD1-F566FFD8F1FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{153B66EF-3EF5-4D70-9B8A-A3E4F83D345D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{153B66EF-3EF5-4D70-9B8A-A3E4F83D345D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{153B66EF-3EF5-4D70-9B8A-A3E4F83D345D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{153B66EF-3EF5-4D70-9B8A-A3E4F83D345D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
