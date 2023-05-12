@@ -69,6 +69,10 @@ namespace DAL
         {
             return new StudentRepo();
         }
+        public static IAuthGuardian<bool> AuthGuardianData()
+        {
+            return new GuardianRepo();
+        }
 
         //MOHOK
         public static IRepo<StudentGuardianTeacher, int, StudentGuardianTeacher> StGuData()

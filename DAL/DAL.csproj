@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="Interfaces\IAuthGuardian.cs" />
     <Compile Include="Interfaces\IAuthStudent.cs" />
     <Compile Include="Interfaces\IAuthTeacher.cs" />
     <Compile Include="Interfaces\IRepo.cs" />

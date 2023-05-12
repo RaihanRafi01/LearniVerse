@@ -8,9 +8,16 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class GuardianRepo : Repo, IRepo<Guardian, int, Guardian>
+    internal class GuardianRepo : Repo, IRepo<Guardian, int, Guardian>, IAuthGuardian<bool>
     {
-       public bool Delete(int id)
+        public bool Authenticate(string username, string password)
+        {
+            var data = db.guardians.FirstOrDefault(x => x.Name.Equals(username) && x.Password.Equals(password));
+            if (data != null) return true;
+            return false;
+        }
+
+        public bool Delete(int id)
         {
             var data = Get(id);
             db.guardians.Remove(data);
