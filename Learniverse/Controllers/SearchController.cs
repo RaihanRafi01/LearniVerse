@@ -6,9 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Learniverse.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class SearchController : ApiController
     {
         [HttpGet]
@@ -26,7 +28,7 @@ namespace Learniverse.Controllers
             }
 
         }
-        [HttpPost]
+        [HttpGet]
         [Route("api/search/{course}")]
         public HttpResponseMessage Get(string course)
         {
