@@ -48,5 +48,12 @@ namespace DAL.Repos
             if (db.SaveChanges() > 0) return obj;
             return null;
         }
+      
+
+        int IRepo<Teacher, int, Teacher>.Count()
+        {
+             var data = db.teachers.Count();
+            return data;
+        }
     }
 }

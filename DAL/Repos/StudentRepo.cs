@@ -14,6 +14,11 @@ namespace DAL.Repos
             return false;
         }
 
+        public int Count()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public bool Delete(int id)
         {
             var data = Get(id);

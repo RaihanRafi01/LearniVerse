@@ -11,6 +11,11 @@ namespace DAL.Repos
 {
     internal class TokenTeacherRepo : Repo, IRepo<TokenTeacher, string, TokenTeacher>
     {
+        public int Count()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Delete(string id)
         {
             throw new NotImplementedException();

@@ -10,6 +10,11 @@ namespace DAL.Repos
 {
     internal class StGuTeRepo : Repo, IRepo<StudentGuardianTeacher, int, StudentGuardianTeacher>
     {
+        public int Count()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Delete(int id)
         {
             var data = Get(id);

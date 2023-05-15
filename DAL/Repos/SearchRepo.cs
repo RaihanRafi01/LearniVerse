@@ -10,6 +10,10 @@ namespace DAL.Repos
 {
     internal class SearchRepo : Repo, IRepo<Search, string, Search>
     {
+        public int Count()
+        {
+            throw new NotImplementedException();
+        }
 
         public bool Delete(string id)
         {

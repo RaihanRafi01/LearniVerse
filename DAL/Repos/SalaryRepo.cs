@@ -7,6 +7,11 @@ namespace DAL.Repos
 {
     internal class SalaryRepo : Repo, IRepo<Salary, int, Salary>
     {
+        public int Count()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public bool Delete(int id)
         {
             var data = Get(id);

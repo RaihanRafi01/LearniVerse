@@ -10,6 +10,11 @@ namespace DAL.Repos
 {
     internal class CourseRepo : Repo, IRepo<Course, string, Course>
     {
+        public int Count()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Delete(string course)
         {
             var data = Get(course);

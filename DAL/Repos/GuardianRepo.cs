@@ -17,6 +17,11 @@ namespace DAL.Repos
             return false;
         }
 
+        public int Count()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Delete(int id)
         {
             var data = Get(id);
