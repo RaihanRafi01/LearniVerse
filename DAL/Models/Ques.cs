@@ -19,6 +19,8 @@ namespace DAL.Models
         public string Option4 { get; set; }
         public string CorrectAns { get; set; }
 
+        public string TeacherName { get; set; }
+
         [ForeignKey("Teacher")]
         [Required]
         public int Tid { get; set; }

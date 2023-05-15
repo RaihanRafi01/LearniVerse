@@ -16,6 +16,9 @@ namespace DAL.Models
         public string Category { get; set; }
         public float Price { get; set; }
 
+        public string TeacherName { get; set; }
+        public string StudentName { get; set; }
+
         [ForeignKey("Teacher")]
         [Required]
         public int Tid { get; set; }

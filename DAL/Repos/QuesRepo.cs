@@ -24,7 +24,12 @@ namespace DAL.Repos
 
         public List<Ques> Get()
         {
-            return db.ques.ToList();
+            var ques = db.ques.ToList();
+            foreach (var que in ques)
+            {
+                que.TeacherName = que.Teacher.Name;
+            }
+            return ques;
         }
 
         public Ques Get(int id)

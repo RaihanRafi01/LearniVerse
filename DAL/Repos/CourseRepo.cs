@@ -24,7 +24,14 @@ namespace DAL.Repos
 
         public List<Course> Get()
         {
-            return db.courses.ToList();
+            var courses = db.courses.ToList();
+            foreach (var course in courses)
+            {
+                course.TeacherName = course.Teacher.Name;
+                course.StudentName = course.Student.Name;
+            }
+            return courses;
+
         }
 
         public Course Get(string course)

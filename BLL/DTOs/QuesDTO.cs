@@ -15,5 +15,7 @@ namespace BLL.DTOs
         public string Option3 { get; set; }
         public string Option4 { get; set; }
         public string CorrectAns { get; set; }
+
+        public string TeacherName { get; set; }
     }
 }

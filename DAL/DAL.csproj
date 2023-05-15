@@ -196,6 +196,14 @@
     <Compile Include="Migrations\202305121811443_edit_guardian.designer.cs">
       <DependentUpon>202305121811443_edit_guardian.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305152109034_edit_course.cs" />
+    <Compile Include="Migrations\202305152109034_edit_course.designer.cs">
+      <DependentUpon>202305152109034_edit_course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305152214480_edit_ques.cs" />
+    <Compile Include="Migrations\202305152214480_edit_ques.designer.cs">
+      <DependentUpon>202305152214480_edit_ques.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Course.cs" />
@@ -324,6 +332,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305121811443_edit_guardian.resx">
       <DependentUpon>202305121811443_edit_guardian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305152109034_edit_course.resx">
+      <DependentUpon>202305152109034_edit_course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305152214480_edit_ques.resx">
+      <DependentUpon>202305152214480_edit_ques.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
