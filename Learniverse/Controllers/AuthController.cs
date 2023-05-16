@@ -34,7 +34,7 @@ namespace Learniverse.Controllers
         }
         [LoggedTeacher]
         [HttpGet]
-        [Route("api/logout")]
+        [Route("api/logout/teacher")]
         public HttpResponseMessage Logout()
         {
             var token = Request.Headers.Authorization.ToString();

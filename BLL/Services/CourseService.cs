@@ -65,5 +65,10 @@ namespace BLL.Services
         {
             return DataAccessFactory.CourseData().Delete(id);
         }
+
+        public static object Count()
+        {
+            return DataAccessFactory.CourseData().Count();
+        }
     }
 }

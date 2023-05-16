@@ -2,6 +2,7 @@
 using BLL.DTOs;
 using DAL;
 using DAL.Models;
+using System;
 using System.Collections.Generic;
 
 namespace BLL.Services
@@ -60,6 +61,11 @@ namespace BLL.Services
         public static bool Delete(int id)
         {
             return DataAccessFactory.StudentData().Delete(id);
+        }
+
+        public static object Count()
+        {
+            return DataAccessFactory.StudentData().Count();
         }
     }
 }

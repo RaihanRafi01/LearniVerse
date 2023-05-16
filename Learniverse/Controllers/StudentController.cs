@@ -1,5 +1,6 @@
 ﻿using BLL.DTOs;
 using BLL.Services;
+using Learniverse.Auth;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -9,6 +10,7 @@ using System.Web.Http.Cors;
 namespace Learniverse.Controllers
 {
     [EnableCors("*", "*", "*")]
+   // [LoggedStudent]
     public class StudentController : ApiController
     {
         [HttpGet]
@@ -97,6 +99,22 @@ namespace Learniverse.Controllers
             {
 
                 return Request.CreateResponse(HttpStatusCode.OK, StudentService.Delete(id));
+            }
+            catch (Exception ex)
+            {
+
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+
+            }
+        }
+        [HttpGet]
+        [Route("api/student/count")]
+        public HttpResponseMessage Count()
+        {
+            try
+            {
+
+                return Request.CreateResponse(HttpStatusCode.OK, StudentService.Count());
             }
             catch (Exception ex)
             {

@@ -22,13 +22,19 @@ namespace DAL.Repos
 
         public List<Search> Get()
         {
-            return db.searches.ToList();
+            var topThreeSearch = db.searches.OrderByDescending(p => p.Count).Take(3);
+            //return db.searches.ToList();
+            return topThreeSearch.ToList();
         }
 
 
         public Search Get(string id)
         {
-            return db.searches.Find(id);
+            var searchAlgo = (from s in db.searches
+                              where s.SearchName.Contains(id)
+                              select s).ToList();
+            return searchAlgo.First();
+            //return db.searches.Find(id);
         }
 
         public Search Insert(Search obj)
