@@ -108,5 +108,21 @@ namespace Learniverse.Controllers
 
             }
         }
+        [HttpGet]
+        [Route("api/course/count")]
+        public HttpResponseMessage Count()
+        {
+            try
+            {
+
+                return Request.CreateResponse(HttpStatusCode.OK, CourseService.Count());
+            }
+            catch (Exception ex)
+            {
+
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+
+            }
+        }
     }
 }

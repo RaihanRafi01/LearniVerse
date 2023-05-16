@@ -36,8 +36,12 @@ namespace DAL.Repos
 
         public Course Get(string course)
         {
-            
-            return db.courses.FirstOrDefault(c => c.Name == course);
+            var cou = (from s in db.courses
+                              where s.Name.Contains(course)
+                              select s).ToList();
+            return cou.First();
+
+            //return db.courses.FirstOrDefault(c => c.Name == course);
         }
 
         public Course Insert(Course obj)
@@ -53,6 +57,11 @@ namespace DAL.Repos
             db.Entry(exdata).CurrentValues.SetValues(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
+        }
+        int IRepo<Course, string, Course>.Count()
+        {
+            var data = db.courses.Count();
+            return data;
         }
     }
 }

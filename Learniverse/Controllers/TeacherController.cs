@@ -15,7 +15,7 @@ namespace Learniverse.Controllers
     [EnableCors("*", "*", "*")]
     public class TeacherController : ApiController
     {
-        [LoggedTeacher]
+        //[LoggedTeacher]
         //[AllowAnonymous]
         [HttpGet]
         [Route("api/teacher")]

@@ -53,5 +53,10 @@ namespace DAL.Repos
             if (db.SaveChanges() > 0) return obj;
             return null;
         }
+        int IRepo<Guardian, int, Guardian>.Count()
+        {
+            var data = db.guardians.Count();
+            return data;
+        }
     }
 }

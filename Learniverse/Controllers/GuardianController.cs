@@ -1,5 +1,6 @@
 ﻿using BLL.DTOs;
 using BLL.Services;
+using Learniverse.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ using System.Web.Http.Cors;
 namespace Learniverse.Controllers
 {
     [EnableCors("*", "*", "*")]
+    //[LoggedGuardian]
     public class GuardianController : ApiController
     {
 
@@ -100,6 +102,22 @@ namespace Learniverse.Controllers
             {
 
                 return Request.CreateResponse(HttpStatusCode.OK, GuardianService.Delete(id));
+            }
+            catch (Exception ex)
+            {
+
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+
+            }
+        }
+        [HttpGet]
+        [Route("api/guardian/count")]
+        public HttpResponseMessage Count()
+        {
+            try
+            {
+
+                return Request.CreateResponse(HttpStatusCode.OK, GuardianService.Count());
             }
             catch (Exception ex)
             {
